@@ -1,0 +1,68 @@
+.doctor-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 50px;
+  }
+  
+  .doctor-card {
+    width: 300px;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+  }
+  
+  .profile-pic {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+  
+  h3 {
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+  
+  p {
+    margin: 0;
+  }
+  
+  .status-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+  
+  .active {
+    background-color: green;
+  }
+  
+  .inactive {
+    background-color: #ccc;
+  }
+  
+  .assign-to-doctor-button {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color:  #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: border-color 0.3s;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .assign-to-doctor-button:hover {
+    border: 1px solid  #007bff;
+    background-color: transparent;
+    color:  #007bff;
+  }
+
+  .bottom-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }

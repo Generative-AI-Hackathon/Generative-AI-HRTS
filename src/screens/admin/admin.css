@@ -1,0 +1,118 @@
+.doctor-page-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.form-profile-container {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 50px;
+}
+
+.patient-form {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.patient-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.patient-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.patient-form button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.patient-form button:hover {
+  background-color: #0056b3;
+}
+
+.profile-container {
+  flex: 1;
+  background-color: #f1f1f1;
+  padding: 20px;
+}
+
+.profile-details {
+  display: flex;
+  align-items: center;
+}
+
+.profile-picture img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.profile-info p {
+  margin-bottom: 10px;
+}
+
+.patient-not-found {
+  background-color: rgb(47, 47, 47);
+  display: grid;
+  padding-left: 50px;
+  padding-right: 50px;
+  place-items: center;
+  text-align: center;
+  color: rgb(126, 126, 126);
+  border-radius: 10px;
+}
+
+.doctor-form {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.doctor-form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.doctor-form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.doctor-form button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.doctor-form button:hover {
+  background-color: #0056b3;
+}
+
+.doctor-form-button {
+  width: 470px;
+  display: flex;
+  gap: 15px;
+  align-items: top;
+}
+
+.doctor-form-button input[type="text"] {
+  flex: 1;
+}
+
+.doctor-form-button button {
+  flex-shrink: 0;
+  height: 39px;
+}
