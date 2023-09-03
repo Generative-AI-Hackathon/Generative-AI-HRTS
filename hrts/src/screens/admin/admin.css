@@ -6,7 +6,7 @@
 
 .form-profile-container {
   display: flex;
-  align-items: center;
+  align-items: top;
   gap: 50px;
   margin-bottom: 50px;
 }
