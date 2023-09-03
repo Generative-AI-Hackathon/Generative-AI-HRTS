@@ -42,7 +42,7 @@ export default class PatientAuthService {
       password: password,
     });
 
-    await adminAuth.setCustomUserClaims(patient.uid, { patient: true })
+    await adminAuth.setCustomUserClaims(patient.uid, { role: "patient" })
       
 
     this.batch.set(PatientSchema.patientDoc(patient.uid), {

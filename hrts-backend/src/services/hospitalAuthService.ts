@@ -56,9 +56,8 @@ export default class HospitalAuthService {
       password: password,
     });
 
-    adminAuth
-      .setCustomUserClaims(hospital.uid, { hospital: true })
-      .then(() => {});
+    await adminAuth.setCustomUserClaims(hospital.uid, { role: "hospital" })
+  
 
     this.batch.set(HospitalSchema.hospitalDoc(hospital.uid), {
       email,
