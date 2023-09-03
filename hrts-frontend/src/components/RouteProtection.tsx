@@ -5,7 +5,7 @@ import { toast } from "react-toastify"
 import { resetAuthFaild } from "../redux";
 
 type PrivateRouteProp = {
-  routeType: "" | "doctor" | "patient" | "hospital"
+  routeType: "" | "doctor" | "patient" | "hospital" | "admin"
 }
 
 const RouteProtection: React.FC<PrivateRouteProp> = ({ routeType }) => {
@@ -13,7 +13,7 @@ const RouteProtection: React.FC<PrivateRouteProp> = ({ routeType }) => {
   const { authStatus, authError, userRole } = useSelector(state => state.auth)
   const dispatch = useDispatch()
 
-  
+
   if (authStatus == "loading") {
     return <Spinner />
   }

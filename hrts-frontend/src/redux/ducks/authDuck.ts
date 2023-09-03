@@ -27,7 +27,7 @@ const authSlice = createSlice({
             state.currentUser = user ? user: null;
             state.authStatus = user ? "authenticated": "unauthenticated"
             state.authError = null
-            console.log("User Role: ", user?.getIdTokenResult.)
+            console.log("User Role: ", user?.getIdTokenResult)
             state.userRole = user ? user.customClaims: "";
         },
 

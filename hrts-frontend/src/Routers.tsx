@@ -20,12 +20,13 @@ import HospitalHistory from "./pages/HospitalHistory";
 import HospitalChat from "./pages/HospitalChat";
 import PatientAccess from "./pages/PatientAccess";
 import HospitalDoctor from "./pages/HospitalDoctor";
+import { Admin } from "./pages/admin/admin";
 
 
 const Router = createBrowserRouter(
   createRoutesFromElements(
     <>
-      
+
       <Route path="/" element={<LandingRoot />}>
         <Route index element={<LandingPage />} />
         <Route element={<RouteProtection routeType={""} />}>
@@ -62,8 +63,9 @@ const Router = createBrowserRouter(
         </Route>
       </Route>
 
+
       {/* <Route path='*' element={<WrongRoute/>}/> */}
-    
+
     </>
   )
 )
