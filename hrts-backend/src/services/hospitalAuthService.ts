@@ -48,7 +48,6 @@ export default class HospitalAuthService {
       description,
       doctorCount,
       historyCount,
-      doctor,
     } = value;
 
     const hospital = await adminAuth.createUser({
@@ -56,8 +55,21 @@ export default class HospitalAuthService {
       password: password,
     });
 
-    await adminAuth.setCustomUserClaims(hospital.uid, { role: "hospital" })
-  
+    await adminAuth.setCustomUserClaims(hospital.uid, { role: "hospital" });
+
+    // await adminDb.collection("hospitals").doc(hospital.uid).set({
+    //   email,
+    //   fullName,
+    //   phone,
+    //   address,
+    //   city,
+    //   type,
+    //   services,
+    //   description,
+    //   doctorCount,
+    //   historyCount,
+    //   createdAt: admin.firestore.FieldValue.serverTimestamp(),
+    // });
 
     this.batch.set(HospitalSchema.hospitalDoc(hospital.uid), {
       email,
@@ -70,7 +82,6 @@ export default class HospitalAuthService {
       description,
       doctorCount,
       historyCount,
-      doctor,
       createdAt: admin.firestore.FieldValue.serverTimestamp(),
     });
 

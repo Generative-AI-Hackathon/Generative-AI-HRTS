@@ -22,4 +22,7 @@ doctorRouter.post("/auth/signin", doctorSignin);
 doctorRouter.delete("/auth/deleteaccount/:id", doctorDeleteAccount);
 doctorRouter.delete("/auth/changepassword/:id", doctorDeleteAccount);
 
+
+doctorRouter.post("/history/patientaccess", doctorDeleteAccount);
+
 export default doctorRouter;

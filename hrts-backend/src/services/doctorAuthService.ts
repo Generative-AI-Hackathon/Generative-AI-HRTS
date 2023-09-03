@@ -53,12 +53,10 @@ export default class doctorAuthService {
       password: password,
     });
 
-    await adminAuth.setCustomUserClaims(doctor.uid, { role: "patient" });
+    await adminAuth.setCustomUserClaims(doctor.uid, { role: "doctor" });
 
     this.batch.set(DoctorSchema.doctorDoc(doctor.uid), {
       email,
-      password,
-      confirmPassword,
       fullName,
       phone,
       headline,

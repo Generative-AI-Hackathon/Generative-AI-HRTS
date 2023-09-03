@@ -42,10 +42,9 @@ export default class PatientAuthService {
       password: password,
     });
 
-    await adminAuth.setCustomUserClaims(patient.uid, { role: "patient" })
-      
+    await adminAuth.setCustomUserClaims(patient.uid, { role: "patient" });
 
-    this.batch.set(PatientSchema.patientDoc(patient.uid), {
+    await adminDb.collection("Patients").doc(patient.uid).set({
       email,
       phone,
       fullName,
@@ -54,7 +53,16 @@ export default class PatientAuthService {
       createdAt: admin.firestore.FieldValue.serverTimestamp(),
     });
 
-    await this.batch.commit();
+    // this.batch.set(PatientSchema.patientDoc(patient.uid), {
+    //   email,
+    //   phone,
+    //   fullName,
+    //   gender,
+    //   birthDate,
+    //   createdAt: admin.firestore.FieldValue.serverTimestamp(),
+    // });
+    // await this.batch.commit();
+
     return { verified: patient.emailVerified, id: patient.uid };
   }
 }

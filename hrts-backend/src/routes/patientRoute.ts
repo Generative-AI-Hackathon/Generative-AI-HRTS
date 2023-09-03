@@ -27,12 +27,11 @@ patientRouter.delete("/auth/deleteaccount/:id", patientDeleteAccount);
 patientRouter.put("/auth/changepassword/:id", patientDeleteAccount);
 
 //History
-patientRouter.post("/medication/add", patientAddHistory);
-patientRouter.get("/medication/get", patientGetHistory);
-patientRouter.get("/medication/filter", patientFilterHistory);
-patientRouter.put("/medication/update", patientUpdateHistory);
-patientRouter.delete("/medication/delete", patientDeleteMedication);
-
+patientRouter.post("/history/add", patientAddHistory);
+patientRouter.get("/history/:userId", patientGetHistory);
+patientRouter.get("/history/filter", patientFilterHistory);
+patientRouter.put("/history/update", patientUpdateHistory);
+patientRouter.delete("/history/delete", patientDeleteMedication);
 
 
 //Medication
