@@ -23,7 +23,6 @@ const RouteProtection: React.FC<PrivateRouteProp> = ({ routeType }) => {
     dispatch(resetAuthFaild())
   }
 
-
   return userRole == routeType ? <Outlet /> : <Navigate to={`/${userRole}`} />
 
 }
