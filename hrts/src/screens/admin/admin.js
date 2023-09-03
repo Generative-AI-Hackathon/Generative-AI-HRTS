@@ -104,7 +104,7 @@ const Admin = () => {
               </div>
             </div>
           ) : (
-            <div className="patient-not-found">
+            <div className="patient-not-found">2
                 <h1>Patient Not Found</h1>
             </div>
           )}
