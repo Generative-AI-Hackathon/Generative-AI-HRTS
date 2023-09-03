@@ -26,7 +26,7 @@ export const HospitalHeader = () => {
                 </NavLink>
 
                 <NavLink to="doctor">
-                    <S.LinkText active={location.pathname == "doctor"}>My Doctors</S.LinkText>
+                    <S.LinkText active={location.pathname == "doctor"}>Doctors</S.LinkText>
                 </NavLink>
 
                 <NavLink to="chat" >
