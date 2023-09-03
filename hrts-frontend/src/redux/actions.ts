@@ -9,6 +9,9 @@ const Actions = {
   EDITSONG: "EDITSONG",
   LOADSONGS: "LOADSONGS",
   MYSONGS: "MYSONGS",
+
+
+  LOADHISTORY: "LOADHISTORY",
 };
 
 export default Actions;

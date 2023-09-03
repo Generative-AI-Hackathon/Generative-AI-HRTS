@@ -1,7 +1,9 @@
 
 const DoctorPatientView = () => {
   return (
-    <div>DoctorPatientView</div>
+    <div>
+      
+    </div>
   )
 }
 

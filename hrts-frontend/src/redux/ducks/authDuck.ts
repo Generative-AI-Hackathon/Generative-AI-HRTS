@@ -22,7 +22,7 @@ const authSlice = createSlice({
 
         // This is a reducer, that set current based on the result during the initial app
         setCurrentUser: (state, action) => {
-            const user : User | null  = action.payload.user;
+            const user: User | null = action.payload.user;
             state.currentUser = user ? user: null;
             state.authStatus = user ? "authenticated": "unauthenticated"
             state.authError = null
