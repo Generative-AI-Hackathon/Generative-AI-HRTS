@@ -9,6 +9,7 @@ export const DoctorHeader = () => {
 
   const location = useLocation();
   const navigate = useNavigate();
+  const lastPath = location.pathname.split('/').pop();
 
   return (
     <S.NavBarDiv>
@@ -16,26 +17,26 @@ export const DoctorHeader = () => {
       <S.HeightFitRoundedImage src={Logo} onClick={() => { navigate("/") }}></S.HeightFitRoundedImage>
       {/* </S.ImageContainer> */}
       <S.NavItem>
-        <NavLink to="/">
-          <S.LinkText active={location.pathname == "/"}>Dashboard</S.LinkText>
+        <NavLink to="">
+          <S.LinkText active={lastPath == "doctor"}>Dashboard</S.LinkText>
         </NavLink>
 
 
-        <NavLink to="/history">
-          <S.LinkText active={location.pathname == "/history"}>History</S.LinkText>
+        <NavLink to="history">
+          <S.LinkText active={lastPath == "history"}>History</S.LinkText>
         </NavLink>
 
-        <NavLink to="/patientaccess">
-          <S.LinkText active={location.pathname == "/patientaccess"}>My Patients</S.LinkText>
+        <NavLink to="patientaccess">
+          <S.LinkText active={lastPath == "patientaccess"}>My Patients</S.LinkText>
         </NavLink>
 
 
-        <NavLink to="/profile" >
-          <S.LinkText active={location.pathname == "/profile"}>Profile</S.LinkText>
+        <NavLink to="profile" >
+          <S.LinkText active={lastPath == "profile"}>Profile</S.LinkText>
         </NavLink>
 
-        <NavLink to="/chat">
-          <S.LinkText active={location.pathname == "/chat"}>chat</S.LinkText>
+        <NavLink to="chat">
+          <S.LinkText active={lastPath == "chat"}>chat</S.LinkText>
         </NavLink>
 
       </S.NavItem>

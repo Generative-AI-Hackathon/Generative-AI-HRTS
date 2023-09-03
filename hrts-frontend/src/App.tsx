@@ -9,8 +9,13 @@ import { auth } from './config/firebase';
 function App() {
   const dispatch = useDispatch();
   onAuthStateChanged(auth, async (user) => {
-
-    dispatch(setCurrentUser(user))
+    let role = "";
+    if (user) {
+      const idToken = await user?.getIdTokenResult();
+      role = idToken?.claims.role;
+    }
+    
+    dispatch(setCurrentUser({ user, role }))
   })
 
 

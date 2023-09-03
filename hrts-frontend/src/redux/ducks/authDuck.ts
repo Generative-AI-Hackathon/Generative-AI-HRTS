@@ -23,12 +23,11 @@ const authSlice = createSlice({
 
         // This is a reducer, that set current based on the result during the initial app
         setCurrentUser: (state, action) => {
-            const user : User | null  = action.payload;
+            const user : User | null  = action.payload.user;
             state.currentUser = user ? user: null;
             state.authStatus = user ? "authenticated": "unauthenticated"
             state.authError = null
-            console.log("User Role: ", user?.getIdTokenResult.)
-            state.userRole = user ? user.customClaims: "";
+            state.userRole = action.payload.role;
         },
 
         // This is a reducer, that sets the auth status to loading

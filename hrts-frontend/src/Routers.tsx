@@ -25,45 +25,45 @@ import HospitalDoctor from "./pages/HospitalDoctor";
 const Router = createBrowserRouter(
   createRoutesFromElements(
     <>
-      
+
       <Route path="/" element={<LandingRoot />}>
         <Route index element={<LandingPage />} />
         <Route element={<RouteProtection routeType={""} />}>
-          <Route path='/signin' element={<Signin />} />
-          <Route path='/signup' element={<Signup />} />
-          <Route path='/resetpassword' element={<ResetPassword />} />
+          <Route path='signin' element={<Signin />} />
+          <Route path='signup' element={<Signup />} />
+          <Route path='resetpassword' element={<ResetPassword />} />
         </Route>
       </Route>
 
       <Route path='/doctor' element={<DoctorRoot />} >
         <Route element={<RouteProtection routeType={"doctor"} />}>
           <Route index element={<DoctorDashboard />} />
-          <Route path="/doctor/history" element={<DoctorHistory />} />
-          <Route path="/doctor/patientaccess" element={<DoctorPatientView />} />
-          <Route path="/doctor/chat" element={<DoctorChat />} />
+          <Route path="history" element={<DoctorHistory />} />
+          <Route path="patientaccess" element={<DoctorPatientView />} />
+          <Route path="chat" element={<DoctorChat />} />
         </Route>
       </Route>
 
       <Route path='/patient' element={<PatientRoot />} >
         <Route element={<RouteProtection routeType={"patient"} />}>
           <Route index element={<PationtHistory />} />
-          <Route path="/patient/medication" element={<PatientMedication />} />
-          <Route path="/patient/doctoraccess" element={<PatientAccess />} />
-          <Route path="/patient/chat" element={<PatientChat />} />
+          <Route path="medication" element={<PatientMedication />} />
+          <Route path="doctoraccess" element={<PatientAccess />} />
+          <Route path="chat" element={<PatientChat />} />
         </Route>
       </Route>
 
       <Route element={<RouteProtection routeType={"hospital"} />}>
         <Route path='/hospital' element={<HospitalRoot />} >
           <Route index element={<HospitalDashboard />} />
-          <Route path="/hospital/history" element={<HospitalHistory />} />
-          <Route path="/hospital/doctor" element={<HospitalDoctor />} />
-          <Route path="/hospital/chat" element={<HospitalChat />} />
+          <Route path="history" element={<HospitalHistory />} />
+          <Route path="doctor" element={<HospitalDoctor />} />
+          <Route path="chat" element={<HospitalChat />} />
         </Route>
       </Route>
 
       {/* <Route path='*' element={<WrongRoute/>}/> */}
-    
+
     </>
   )
 )
