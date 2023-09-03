@@ -35,21 +35,20 @@ export default class PatientAuthService {
       throw error;
     }
 
-    const { email, password, name, gender, birthDate, phone } = value;
+    const { email, password, fullName, gender, birthDate, phone } = value;
 
     const patient = await adminAuth.createUser({
       email: email,
       password: password,
     });
 
-    adminAuth
-      .setCustomUserClaims(patient.uid, { patient: true })
-      .then(() => {});
+    await adminAuth.setCustomUserClaims(patient.uid, { patient: true })
+      
 
     this.batch.set(PatientSchema.patientDoc(patient.uid), {
       email,
       phone,
-      name,
+      fullName,
       gender,
       birthDate,
       createdAt: admin.firestore.FieldValue.serverTimestamp(),

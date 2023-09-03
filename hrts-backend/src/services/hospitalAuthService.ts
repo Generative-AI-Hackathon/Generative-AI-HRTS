@@ -39,7 +39,7 @@ export default class HospitalAuthService {
       email,
       password,
       confirmPassword,
-      name,
+      fullName,
       address,
       city,
       phone,
@@ -62,7 +62,7 @@ export default class HospitalAuthService {
 
     this.batch.set(HospitalSchema.hospitalDoc(hospital.uid), {
       email,
-      name,
+      fullName,
       phone,
       address,
       city,
