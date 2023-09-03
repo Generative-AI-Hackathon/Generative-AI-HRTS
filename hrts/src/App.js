@@ -4,7 +4,7 @@ import Home from "./screens/home/home";
 import PatientHistory from "./screens/patients/medicalHistory";
 
 function App() {
-  return <Home />;
+  return <PatientHistory />;
 }
 
 export default App;
