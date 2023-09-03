@@ -20,6 +20,7 @@ import HospitalHistory from "./pages/HospitalHistory";
 import HospitalChat from "./pages/HospitalChat";
 import PatientAccess from "./pages/PatientAccess";
 import HospitalDoctor from "./pages/HospitalDoctor";
+import { Admin } from "./pages/admin/admin";
 
 
 const Router = createBrowserRouter(
@@ -61,6 +62,7 @@ const Router = createBrowserRouter(
           <Route path="chat" element={<HospitalChat />} />
         </Route>
       </Route>
+
 
       {/* <Route path='*' element={<WrongRoute/>}/> */}
 

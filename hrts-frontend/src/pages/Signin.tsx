@@ -1,5 +1,5 @@
 import { ChangeEvent, useState } from 'react'
-import AuthBackground from '../assets/images/AuthBackground.png'
+import AuthBackground from '../assets/images/Premium Vector _ The doctor and patient distance consulting of treatment on a smartphone concept_.jpeg'
 import { Link } from 'react-router-dom'
 import * as S from '../../styles';
 import * as yup from 'yup';
